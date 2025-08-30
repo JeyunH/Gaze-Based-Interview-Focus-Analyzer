@@ -1,4 +1,4 @@
-# AI 면접 연습을 위한 시선 및 머리 움직임 분석기 (Gaze & Head Pose Analyzer for AI Interview Practice)
+# AI 면접 연습을 위한 시선 및 머리 움직임 분석기 <br>(Gaze & Head Pose Analyzer for AI Interview Practice)
 
 [![Python](https://img.shields.io/badge/Python-3.9%2B-blue?logo=python)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-orange?logo=pytorch)](https://pytorch.org/)
