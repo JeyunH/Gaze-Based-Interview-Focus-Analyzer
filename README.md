@@ -33,7 +33,7 @@ AI 면접 연습 웹 서비스에 사용될 **사용자 집중도 분석** AI �
 | :-------------------------: | :------------------------------------: |
 | ![Head Pose Estimation Demo](etc/head_pose_demo.gif) | ![Gaze Estimation Demo](etc/gaze_demo.gif) |
 
-*`L2CS-Net`을 통해 시선 방향(빨간색 벡터)을 추정하고, `MediaPipe`와 지수이동평균(or 칼만) 필터를 통해 머리 방향(3D 축)을 추정하는 모습입니다.*
+*`MediaPipe`와 지수이동평균(or 칼만) 필터를 통해 머리 방향(3D 축)을 추정하고, `L2CS-Net`을 통해 시선 방향(빨간색 벡터)을 추정하는 모습입니다.*
 
 <br>
 
@@ -88,19 +88,17 @@ pip install git+https://github.com/edavalosanaya/L2CS-Net.git@main
 
 ```python
 # L2CS-Net (시선 추정) 테스트 코드 실행
-python gaze_estimation_test.py
+L2CS-Net Usage 테스트.ipynb
 
 # MediaPipe (머리 움직임) 테스트 코드 실행
-python head_pose_estimation_test.py
+MediaPipe 웹캠 테스트.ipynb
 ```
 
 <br>
 
 ## 향후 계획 (Future Work)
 
-- [ ] 분석 데이터의 시계열 저장을 통한 면접 후 종합 리포트 생성 기능
-- [ ] 시선과 머리 움직임 데이터를 종합하여 '집중도 점수'를 산출하는 알고리즘 고도화
-- [ ] 웹 서비스 연동을 위한 FastAPI 기반 API 서버 구축
-- [ ] 모델 경량화를 통한 웹 브라우저 환경(WebAssembly)에서의 실시간 처리 연구
+- [ ] 문헌 조사 기반의 집중도 수치 산출 알고리즘 개발
+- [ ] 면접 연습 웹 서비스 연동으로 면접 집중도 분석 결과 시각화
 
 ---
