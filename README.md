@@ -15,9 +15,9 @@ AI 면접 연습 웹 서비스에 사용될 **사용자 집중도 분석** AI �
   - L2CS-Net 모델을 활용하여 사용자의 시선이 화면 중앙을 향하는지, 혹은 다른 곳으로 분산되는지를 실시간으로 추정합니다.
   - Pitch (상하) 및 Yaw (좌우) 각도를 계산하여 시선의 방향을 정량화합니다.
 
-- **🌝 안정적인 머리 자세 추정 (Robust Head Pose Estimation)**
+- **🌝 머리 자세 추정 (Robust Head Pose Estimation)**
   - MediaPipe Face Mesh를 기반으로 3D 얼굴 랜드마크를 감지하고, 이를 `cv2.solvePnP` 함수와 결합하여 머리의 3차원 회전 각도(Yaw, Pitch, Roll)를 계산합니다.
-  - **칼만 필터(Kalman Filter)**를 적용하여 머리 움직임 값의 노이즈와 떨림 현상을 최소화하고, 부드럽고 안정적인 추적 결과를 제공합니다.
+  - **지수 이동 평균 필터, 칼만 필터(Kalman Filter)** 를 적용하여 머리 움직임 값의 노이즈와 떨림 현상을 최소화하고, 부드럽고 안정적인 추적 결과를 제공합니다.
 
 - **📊 데이터 시각화 (Data Visualization)**
   - 사용자가 직관적으로 자신의 상태를 파악할 수 있도록 시선 벡터와 머리 방향 축(3D Axis)을 웹캠 영상 위에 실시간으로 렌더링합니다.
@@ -29,7 +29,7 @@ AI 면접 연습 웹 서비스에 사용될 **사용자 집중도 분석** AI �
 
 이 프로젝트는 다음과 같이 사용자의 시선과 머리 움직임을 실시간으로 분석하고 시각화합니다.
 
-| 시선 추정 (Gaze Estimation) | 머리 움직임 추정 (Head Pose Estimation) |
+| 머리 움직임 추정 (Head Pose Estimation) | 시선 추정 (Gaze Estimation) |
 | :-------------------------: | :------------------------------------: |
 | ![Head Pose Estimation Demo](etc/head_pose_demo.gif) | ![Gaze Estimation Demo](etc/gaze_demo.gif) |
 
