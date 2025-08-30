@@ -96,7 +96,7 @@ python head_pose_estimation_test.py
 
 <br>
 
-## 📜 향후 계획 (Future Work)
+## 향후 계획 (Future Work)
 
 - [ ] 분석 데이터의 시계열 저장을 통한 면접 후 종합 리포트 생성 기능
 - [ ] 시선과 머리 움직임 데이터를 종합하여 '집중도 점수'를 산출하는 알고리즘 고도화
