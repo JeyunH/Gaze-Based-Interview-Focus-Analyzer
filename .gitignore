@@ -1,0 +1,12 @@
+#IDE
+.ipynb_checkpoints/
+
+#document
+.virtual_documents/
+
+#etc
+ai_server_test01.ipynb
+webcam.mp4
+
+#model
+models/L2CSNet_gaze360.pkl
