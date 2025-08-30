@@ -46,7 +46,7 @@ AI 면접 연습 웹 서비스에 사용될 **면접 집중도 분석** AI 모�
 | :-------------------------: | :------------------------------------: |
 | ![Head Pose Estimation Demo](etc/head_pose_demo.gif) | ![Gaze Estimation Demo](etc/gaze_demo.gif) |
 
-*`MediaPipe`와 지수이동평균(or 칼만) 필터를 통해 머리 방향(3축)을 추정하고, `L2CS-Net`을 통해 시선 방향(빨간색 벡터)을 추정하는 모습입니다.*
+*`MediaPipe`와 지수이동평균(or 칼만) 필터를 통해 머리 방향(3D 축)을 추정하고, `L2CS-Net`을 통해 시선 방향(빨간색 벡터)을 추정하여 시각화한 모습입니다.*
 
 <br>
 
