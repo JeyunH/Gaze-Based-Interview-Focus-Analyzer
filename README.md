@@ -96,7 +96,12 @@ pip install git+https://github.com/edavalosanaya/L2CS-Net.git@main
 
 - [L2CSNet_gaze360.pkl](https://drive.google.com/drive/folders/17p6ORr-JQJcw-eYtG2WGNiuS_qVKwdWd?usp=sharing) 파일을 다운로드하여 `models/` 폴더 내에 위치시킵니다.
 
-### 4. 코드 실행 (Execution)
+### 4. 영상 데이터 준비 (Prepare Data)
+
+AI 추론에 사용할, 얼굴과 눈이 보이는 영상을 준비하여 프로젝트 폴더에 `webcam.mp4`라는 이름으로 저장<br>
+확장자 또는 파일 이름이 다를 경우, 코드 내 `webcam.mp4`를 대체하여 사용
+
+### 5. 코드 실행 (Execution)
 
 데모 코드를 실행하여 웹캠이나 비디오 파일로 기능을 테스트할 수 있습니다.
 
