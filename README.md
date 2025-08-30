@@ -9,13 +9,13 @@ AI 면접 연습 웹 서비스에 사용될 **사용자 집중도 분석** AI �
 
 <br>
 
-## 🚀 주요 기능 (Key Features)
+## 주요 기능 (Key Features)
 
 - **👀 실시간 시선 추정 (Real-time Gaze Estimation)**
   - L2CS-Net 모델을 활용하여 사용자의 시선이 화면 중앙을 향하는지, 혹은 다른 곳으로 분산되는지를 실시간으로 추정합니다.
   - Pitch (상하) 및 Yaw (좌우) 각도를 계산하여 시선의 방향을 정량화합니다.
 
-- **🧠 안정적인 머리 자세 추정 (Robust Head Pose Estimation)**
+- **🌝 안정적인 머리 자세 추정 (Robust Head Pose Estimation)**
   - MediaPipe Face Mesh를 기반으로 3D 얼굴 랜드마크를 감지하고, 이를 `cv2.solvePnP` 함수와 결합하여 머리의 3차원 회전 각도(Yaw, Pitch, Roll)를 계산합니다.
   - **칼만 필터(Kalman Filter)**를 적용하여 머리 움직임 값의 노이즈와 떨림 현상을 최소화하고, 부드럽고 안정적인 추적 결과를 제공합니다.
 
@@ -25,15 +25,15 @@ AI 면접 연습 웹 서비스에 사용될 **사용자 집중도 분석** AI �
 
 <br>
 
-## 🎬 데모 (Demonstration)
+## 📽 데모
 
 이 프로젝트는 다음과 같이 사용자의 시선과 머리 움직임을 실시간으로 분석하고 시각화합니다.
 
 | 시선 추정 (Gaze Estimation) | 머리 움직임 추정 (Head Pose Estimation) |
 | :-------------------------: | :------------------------------------: |
-| ![Gaze Estimation Demo](etc/gaze_demo.gif) | ![Head Pose Estimation Demo](etc/head_pose_demo.gif) |
+| ![Head Pose Estimation Demo](etc/head_pose_demo.gif) | ![Gaze Estimation Demo](etc/gaze_demo.gif) |
 
-*`L2CS-Net`을 통해 시선 방향(파란색 벡터)을 추정하고, `MediaPipe`와 칼만 필터를 통해 안정적인 머리 방향(3D 축)을 추정하는 모습입니다.*
+*`L2CS-Net`을 통해 시선 방향(빨간색 벡터)을 추정하고, `MediaPipe`와 지수이동평균(or 칼만) 필터를 통해 머리 방향(3D 축)을 추정하는 모습입니다.*
 
 <br>
 
@@ -58,7 +58,7 @@ AI 면접 연습 웹 서비스에 사용될 **사용자 집중도 분석** AI �
 
 ```bash
 # 가상환경 생성
-conda create -n gaze_env python=3.9
+conda create -n gaze_env python=3.11
 conda activate gaze_env
 ```
 
@@ -69,18 +69,18 @@ conda activate gaze_env
 ```bash
 # 1. PyTorch 설치 (자신의 CUDA 버전에 맞게 설치)
 # (예: CUDA 11.8)
-pip install torch torchvision torchaudio --index-url [https://download.pytorch.org/whl/cu118](https://download.pytorch.org/whl/cu118)
+pip install torch==2.6.0 torchvision==0.21.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cu118
 
 # 2. L2CS-Net 및 기타 라이브러리 설치
 pip install opencv-python mediapipe numpy
-pip install git+[https://github.com/edavalosanaya/L2CS-Net.git@main](https://github.com/edavalosanaya/L2CS-Net.git@main)
+pip install git+https://github.com/edavalosanaya/L2CS-Net.git@main
 ```
 
 ### 3. 모델 가중치 파일 다운로드 (Download Model Weights)
 
 시선 추정을 위해 사전 훈련된 L2CS-Net 모델 가중치 파일이 필요합니다.
 
-- [L2CSNet_gaze360.pkl](https://github.com/av-interview/L2CS-Net/releases/download/1.0/L2CSNet_gaze360.pkl) 파일을 다운로드하여 `models/` 폴더 내에 위치시킵니다.
+- [L2CSNet_gaze360.pkl](https://drive.google.com/drive/folders/17p6ORr-JQJcw-eYtG2WGNiuS_qVKwdWd?usp=sharing) 파일을 다운로드하여 `models/` 폴더 내에 위치시킵니다.
 
 ### 4. 코드 실행 (Execution)
 
